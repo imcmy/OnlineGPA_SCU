@@ -63,7 +63,7 @@ public class Login {
 
 		JLabel label = new JLabel("\u7528 \u6237 \u540D");
 		label.setForeground(new Color(255, 255, 0));
-		label.setFont(new Font("黑体", Font.PLAIN, 14));
+		label.setFont(new Font("榛戜綋", Font.PLAIN, 14));
 		label.setBounds(10, 48, 56, 15);
 		panel_2.add(label);
 
@@ -83,7 +83,7 @@ public class Login {
 
 		JLabel label_1 = new JLabel("\u5BC6    \u7801");
 		label_1.setForeground(new Color(255, 255, 0));
-		label_1.setFont(new Font("黑体", Font.PLAIN, 14));
+		label_1.setFont(new Font("榛戜綋", Font.PLAIN, 14));
 		label_1.setBounds(10, 81, 56, 15);
 		panel_2.add(label_1);
 
@@ -95,14 +95,14 @@ public class Login {
 
 				if (zjh.equals("") || mm.equals("")) {
 
-					JOptionPane.showMessageDialog(null, "错误用户名或密码，请重新输入!", "提示", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "閿欒鐢ㄦ埛鍚嶆垨瀵嗙爜锛岃閲嶆柊杈撳叆!", "鎻愮ず", JOptionPane.ERROR_MESSAGE);
 					return;
 				}
 
 				ok = new OnlineGPA(zjh, mm);
 				if (ok.getFinal().equals("Error!")) {
 
-					JOptionPane.showMessageDialog(null, "错误用户名或密码，请重新输入!", "提示", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "閿欒鐢ㄦ埛鍚嶆垨瀵嗙爜锛岃閲嶆柊杈撳叆!", "鎻愮ず", JOptionPane.ERROR_MESSAGE);
 					passwordField.setText("");
 					return;
 				} else {
@@ -133,7 +133,7 @@ public class Login {
 		JLabel lblbug = new JLabel("\u6DFB\u52A0\u6B22\u8FCE\u6D88\u606F\uFF0C\u6DFB\u52A0\u6392\u5E8F\u3001\u7B5B\u9009\u529F\u80FD\uFF0C\u6B22\u8FCE\u53CD\u6620bug");
 		lblbug.setForeground(new Color(255, 255, 0));
 		lblbug.setBackground(SystemColor.textHighlight);
-		lblbug.setFont(new Font("微软雅黑", Font.PLAIN, 12));
+		lblbug.setFont(new Font("寰蒋闆呴粦", Font.PLAIN, 12));
 		lblbug.setHorizontalAlignment(SwingConstants.CENTER);
 		lblbug.setBounds(10, 10, 307, 15);
 		panel_2.add(lblbug);
@@ -144,7 +144,7 @@ public class Login {
 
 		JLabel lblOnlinegpaVer = new JLabel("OnlineGPA \u5BD2\u5047\u7EC8\u7ED3\u7248");
 		lblOnlinegpaVer.setForeground(new Color(255, 255, 0));
-		lblOnlinegpaVer.setFont(new Font("微软雅黑", Font.PLAIN, 16));
+		lblOnlinegpaVer.setFont(new Font("寰蒋闆呴粦", Font.PLAIN, 16));
 		panel.add(lblOnlinegpaVer);
 
 		JPanel panel_1 = new JPanel();

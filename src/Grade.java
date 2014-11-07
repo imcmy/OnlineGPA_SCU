@@ -1,6 +1,6 @@
 /**
  * Class Grade
- * ÓÃÀ´»ñÈ¡³É¼¨Ò³ÃæµÄ³É¼¨£¬±È½«Æä´«Èë×Ö·û´®
+ * ç”¨æ¥è·å–æˆç»©é¡µé¢çš„æˆç»©ï¼Œæ¯”å°†å…¶ä¼ å…¥å­—ç¬¦ä¸²
  */
 
 import java.io.*;
@@ -21,30 +21,30 @@ public class Grade {
 	
 	private void getGrades(List<Cookie> cookies) {
 	
-		/* ÉùÃ÷ÍøÖ·×Ö·û´® */
+		/* å£°æ˜ç½‘å€å­—ç¬¦ä¸² */
         String uriAPI = 
         		"http://202.115.47.141/gradeLnAllAction.do?type=ln&oper=sxinfo&lnsxdm=001#qb_001";
         
-        /* ½¨Á¢HttpPostÁª»ú */
+        /* å»ºç«‹HttpPostè”æœº */
         HttpPost httpRequest = new HttpPost(uriAPI);
         
         try {
-        	//°ÑÖ®Ç°µÄcookie·Åµ½´Ë´ÎPOSTËùĞèÒªµÄÍ·ĞÅÏ¢ÖĞ
+        	//æŠŠä¹‹å‰çš„cookieæ”¾åˆ°æ­¤æ¬¡POSTæ‰€éœ€è¦çš„å¤´ä¿¡æ¯ä¸­
         	httpRequest.setHeader("Cookie","JSESSIONID=" + cookies.get(0).getValue());
         	
-        	/* ·¢³öHTTP request */  
+        	/* å‘å‡ºHTTP request */  
         	HttpResponse httpResponse = new DefaultHttpClient().execute(httpRequest);
         	
-        	/* Èô×´Ì¬ÂëÎª200*/
+        	/* è‹¥çŠ¶æ€ç ä¸º200*/
         	if (httpResponse.getStatusLine().getStatusCode() == 200) {
         		
-        		/* °Ñ´ÓÍøÒ³»ñÈ¡µ½µÄÄÚÈİ¶ÁÈëbuffer */
+        		/* æŠŠä»ç½‘é¡µè·å–åˆ°çš„å†…å®¹è¯»å…¥buffer */
                 StringBuffer sb = new StringBuffer();
                 HttpEntity entity = httpResponse.getEntity();
                 InputStream is = entity.getContent();
                 BufferedReader br = new BufferedReader(new InputStreamReader(is, "GB2312"));
                 
-                /* ´Óbuffer×ªÈëstring */
+                /* ä»bufferè½¬å…¥string */
                 String data = "";  
                 while ((data = br.readLine()) != null) {
                     sb.append(data);

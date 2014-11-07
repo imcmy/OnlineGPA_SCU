@@ -96,7 +96,7 @@ public class GradeWindow {
 				StringSelection stringSel = new StringSelection(summary);
 				clipboard.setContents(stringSel, null);
 				
-				JOptionPane.showMessageDialog(null, "¸´ÖÆ³É¹¦!", "ÌáÊ¾", JOptionPane.PLAIN_MESSAGE);
+				JOptionPane.showMessageDialog(null, "å¤åˆ¶æˆåŠŸ!", "æç¤º", JOptionPane.PLAIN_MESSAGE);
 			}
 		});
 		mnNewMenu.add(mntmNewMenuItem_1);
@@ -120,7 +120,7 @@ public class GradeWindow {
 		mntmNewMenuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				JOptionPane.showMessageDialog(null, "°æÈ¨ËùÓĞ ÇÖÈ¨ÎÒÒ²²»ÖªµÀ\n\nCopyright\u00A9 2013-2014 My", "ÌáÊ¾", JOptionPane.PLAIN_MESSAGE);
+				JOptionPane.showMessageDialog(null, "ç‰ˆæƒæ‰€æœ‰ ä¾µæƒæˆ‘ä¹Ÿä¸çŸ¥é“\n\nCopyright\u00A9 2013-2014 My", "æç¤º", JOptionPane.PLAIN_MESSAGE);
 			}
 		});
 		mnNewMenu_1.add(mntmNewMenuItem);
@@ -135,7 +135,7 @@ public class GradeWindow {
 	    String Cproperty[] = gpa.getCproperty();
 	    float Cgrade[] = gpa.getCgrade();
 	    
-	    String[] header = {"¿Î³ÌºÅ", "¿Î³ÌÃû", "Ñ§·Ö", "¿Î³ÌÊôĞÔ", "·ÖÊı"};
+	    String[] header = {"è¯¾ç¨‹å·", "è¯¾ç¨‹å", "å­¦åˆ†", "è¯¾ç¨‹å±æ€§", "åˆ†æ•°"};
 	    Object[][] content = new Object[gpa.getLength()][5];
 	    for (int i=0; i<gpa.getLength(); i++) {
 	    	int j = 0;
@@ -164,7 +164,7 @@ public class GradeWindow {
 		};
 		final TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);  
         table.setRowSorter(sorter);
-		table.setFont(new Font("ËÎÌå", Font.PLAIN, 12));
+		table.setFont(new Font("å®‹ä½“", Font.PLAIN, 12));
 		table.setRowSelectionAllowed(false);
 		DefaultTableCellRenderer render = new DefaultTableCellRenderer();
 	    render.setHorizontalAlignment(SwingConstants.CENTER);
@@ -199,14 +199,14 @@ public class GradeWindow {
 		final JComboBox comboBox = new JComboBox();
 		panel_4.add(comboBox, BorderLayout.CENTER);
 		comboBox.addItem("");
-		comboBox.addItem("±ØĞŞ");
-		comboBox.addItem("Ñ¡ĞŞ");
-		comboBox.addItem("ÈÎÑ¡");
+		comboBox.addItem("å¿…ä¿®");
+		comboBox.addItem("é€‰ä¿®");
+		comboBox.addItem("ä»»é€‰");
 		
 		JLabel lblNewLabel_1 = new JLabel("   \u7B5B\u9009\u5C5E\u6027   ");
 		lblNewLabel_1.setForeground(new Color(255, 255, 0));
 		lblNewLabel_1.setBackground(SystemColor.textHighlight);
-		lblNewLabel_1.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));
+		lblNewLabel_1.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));
 		panel_4.add(lblNewLabel_1, BorderLayout.WEST);
 		
 		JPanel panel_5 = new JPanel();
@@ -217,7 +217,7 @@ public class GradeWindow {
 		JLabel lblNewLabel_2 = new JLabel(gpa.getName());
 		lblNewLabel_2.setForeground(new Color(255, 255, 0));
 		lblNewLabel_2.setBackground(SystemColor.textHighlight);
-		lblNewLabel_2.setFont(new Font("Î¢ÈíÑÅºÚ", Font.BOLD, 14));
+		lblNewLabel_2.setFont(new Font("å¾®è½¯é›…é»‘", Font.BOLD, 14));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_5.add(lblNewLabel_2, BorderLayout.CENTER);
 		
@@ -234,11 +234,11 @@ public class GradeWindow {
                 if (index == 0) {
                 	sorter.setRowFilter(null);
                 } else if (index == 1) {
-                	sorter.setRowFilter(RowFilter.regexFilter("±ØĞŞ"));
+                	sorter.setRowFilter(RowFilter.regexFilter("å¿…ä¿®"));
                 } else if (index == 2) {
-                	sorter.setRowFilter(RowFilter.regexFilter("Ñ¡ĞŞ"));
+                	sorter.setRowFilter(RowFilter.regexFilter("é€‰ä¿®"));
                 } else if (index == 3) {
-                	sorter.setRowFilter(RowFilter.regexFilter("ÈÎÑ¡"));
+                	sorter.setRowFilter(RowFilter.regexFilter("ä»»é€‰"));
                 }
             }
         });
@@ -251,7 +251,7 @@ public class GradeWindow {
 		JLabel lblNewLabel = new JLabel(gpa.getFinal());
 		lblNewLabel.setForeground(new Color(255, 255, 0));
 		lblNewLabel.setBackground(SystemColor.textHighlight);
-		lblNewLabel.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));
+		lblNewLabel.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNewLabel, BorderLayout.CENTER);
 		

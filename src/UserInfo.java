@@ -17,30 +17,30 @@ public class UserInfo {
 	
 	private void getInfo(List<Cookie> cookies) {
 	
-		/* ÉùÃ÷ÍøÖ·×Ö·û´® */
+		/* å£°æ˜ç½‘å€å­—ç¬¦ä¸² */
         String uriAPI = 
         		"http://202.115.47.141/xjInfoAction.do?oper=xjxx";
         
-        /* ½¨Á¢HttpPostÁª»ú */
+        /* å»ºç«‹HttpPostè”æœº */
         HttpPost httpRequest = new HttpPost(uriAPI);
         
         try {
-        	//°ÑÖ®Ç°µÄcookie·Åµ½´Ë´ÎPOSTËùĞèÒªµÄÍ·ĞÅÏ¢ÖĞ
+        	//æŠŠä¹‹å‰çš„cookieæ”¾åˆ°æ­¤æ¬¡POSTæ‰€éœ€è¦çš„å¤´ä¿¡æ¯ä¸­
         	httpRequest.setHeader("Cookie","JSESSIONID=" + cookies.get(0).getValue());
         	
-        	/* ·¢³öHTTP request */  
+        	/* å‘å‡ºHTTP request */  
         	HttpResponse httpResponse = new DefaultHttpClient().execute(httpRequest);
         	
-        	/* Èô×´Ì¬ÂëÎª200*/
+        	/* è‹¥çŠ¶æ€ç ä¸º200*/
         	if (httpResponse.getStatusLine().getStatusCode() == 200) {
         		
-        		/* °Ñ´ÓÍøÒ³»ñÈ¡µ½µÄÄÚÈİ¶ÁÈëbuffer */
+        		/* æŠŠä»ç½‘é¡µè·å–åˆ°çš„å†…å®¹è¯»å…¥buffer */
                 StringBuffer sb = new StringBuffer();
                 HttpEntity entity = httpResponse.getEntity();
                 InputStream is = entity.getContent();
                 BufferedReader br = new BufferedReader(new InputStreamReader(is, "GB2312"));
                 
-                /* ´Óbuffer×ªÈëstring */
+                /* ä»bufferè½¬å…¥string */
                 String data = "";  
                 while ((data = br.readLine()) != null) {
                     sb.append(data);

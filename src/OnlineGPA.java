@@ -6,19 +6,19 @@ public class OnlineGPA {
 	private float grade = 0;
 	private float GPA = 0;
 	private String[] info;
-	// ¿Î³ÌºÅ
+	// è¯¾ç¨‹å·
     private String CNO[];
-    // ¿ÎĞòºÅ
+    // è¯¾åºå·
     private String CN[];
-    // ¿Î³ÌÃû
+    // è¯¾ç¨‹å
     private String Cname[];
-    // Ó¢ÎÄ¿Î³ÌÃû
+    // è‹±æ–‡è¯¾ç¨‹å
     private String CEname[];
-    // Ñ§·Ö
+    // å­¦åˆ†
     private float Cscore[];
-    // ¿Î³ÌÊôĞÔ
+    // è¯¾ç¨‹å±æ€§
     private String Cproperty[];
-    // ·ÖÊı
+    // åˆ†æ•°
     private float Cgrade[];
     private int length;
     private String finalText;
@@ -50,7 +50,7 @@ public class OnlineGPA {
 		} else {
 			
 			DecimalFormat df = new DecimalFormat("0.00");
-			finalText = "ÄãµÄ±ØĞŞ¿Î¼ÓÈ¨Æ½¾ù·ÖÎª£º" + df.format(grade) + "    " + "ÄãµÄ±ØĞŞ¿Î¼¨µãÎª£º" + df.format(GPA);
+			finalText = "ä½ çš„å¿…ä¿®è¯¾åŠ æƒå¹³å‡åˆ†ä¸ºï¼š" + df.format(grade) + "    " + "ä½ çš„å¿…ä¿®è¯¾ç»©ç‚¹ä¸ºï¼š" + df.format(GPA);
 		}
 	}
 	
@@ -107,6 +107,6 @@ public class OnlineGPA {
 	
 	public String getName() {
 		
-		return info[1] + ", ÄúºÃ!";
+		return info[1] + ", æ‚¨å¥½!";
 	}
 }
